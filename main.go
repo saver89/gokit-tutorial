@@ -33,6 +33,7 @@ func main() {
 
 	http.Handle("/uppercase", uppercaseHandler)
 	http.Handle("/count", countHandler)
+	http.ListenAndServe(":8080", nil)
 }
 
 type loggingMiddleware struct {
